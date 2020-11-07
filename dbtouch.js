@@ -181,8 +181,8 @@ InteractionManager.prototype.onTouchStart = function (originalEvent) {
         const interactionEvent = this.configureInteractionEventForDOMEvent(this.eventData, event, interactionData);
 
         interactionEvent.data.originalEvent = originalEvent;
-
-        this.processInteractive(interactionEvent, this.lastObjectRendered, this.processTouchStart, true);
+        // the reference to the private property _lastObjectRendered is bad! DId not find out why this.lastObjectRendered was undefined
+        this.processInteractive(interactionEvent, this.renderer._lastObjectRendered, this.processTouchStart, true);
     }
 };
 
