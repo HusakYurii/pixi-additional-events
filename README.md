@@ -21,7 +21,7 @@ const config = {
 
 const app = new Application(config);
 app.stage.position.set(150, 150);
-const text = new Text("I am the 1stt", {
+const text = new Text("I am for testing!", {
     fill: "#cfb9b9",
     fontFamily: "Comic Sans MS",
     fontSize: 30,
@@ -33,7 +33,7 @@ text.position.set(0, 100);
 text.interactive = true;
 
 // will happen if a user makes 2 touches with in the 300 ms at the same object
-text.on("dbtouch", (event) => {
+text.on("dbltouch", (event) => {
     console.log("dbtouch event!");
     // the same event which other PIXI.js events have
     console.log(event);
