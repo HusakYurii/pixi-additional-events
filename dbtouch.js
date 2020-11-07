@@ -203,7 +203,7 @@ InteractionManager.prototype.processTouchStart = function (interactionEvent, dis
         const prevData = this.touchEventsPool.get(newData.id - 1);
 
         if (prevData && this.touchEventsPool.isDoubleTouch(prevData, newData)) {
-            this.dispatchEvent(displayObject, 'dbtouch', interactionEvent);
+            this.dispatchEvent(displayObject, 'dbltouch', interactionEvent);
             this.touchEventsPool.delete(prevData.id);
         }
     }
